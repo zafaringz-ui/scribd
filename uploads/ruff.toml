@@ -1,0 +1,7 @@
+target-version = "py39"
+
+[lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[lint.isort]
+known-first-party = ["cookies", "extract", "token", "download", "build_pdf", "main"]
