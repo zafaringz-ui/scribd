@@ -1,0 +1,25 @@
+# Core dependencies - this is all the tool imports.
+#   playwright  drives Chromium (the browser binary is a separate ~120 MB download)
+#   img2pdf     assembles the screenshots into a PDF (pure python, tiny)
+#   pypdf       page-count verification and merging
+#   pillow      image sanity checks
+#   requests    the fragment/text engine's HTTP calls
+playwright>=1.40.0
+img2pdf>=0.5.1
+pypdf>=3.15.0
+pillow>=10.0.0
+requests>=2.31.0
+
+# only for chromium_setup.py (unpacking @sparticuz/chromium): 1 MB, pure wheel
+brotli>=1.1.0
+
+# The browser. Installs like any other dependency; its ~150 MB stealth Chromium
+# downloads on the first launch and is cached in ~/.cloakbrowser.
+# The wrapper is MIT; the binary carries its own licence (free tier = v146).
+# Plain Chromium is still selectable with SCRIBD_BROWSER=chrome, but it cannot
+# clear Scribd's JS bot challenge, so it is no longer the default.
+cloakbrowser>=0.6.4
+
+# Deliberately NOT included: `chromium`. That PyPI package is a 2.4 kB stub
+# that only prints a download URL - it contains no browser. A real one comes
+# from chromium_setup.py (or run.py, which runs it for you).

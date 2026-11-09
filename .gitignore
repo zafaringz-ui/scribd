@@ -1,0 +1,25 @@
+# Local configuration and credentials
+.env
+.discord-token
+.cookies*
+cookies.txt
+*cookie*.txt
+
+# Runtime downloads, browser binaries, and generated output
+output/
+.tmp/
+.temp/
+.chromium/
+.cloakbrowser/
+.cloak/
+.cftfull/
+.local/
+.pw-browsers/
+.scribd-cache/
+.thumbs/
+.webtoken
+*.log
+
+# Python-generated files
+__pycache__/
+*.py[cod]

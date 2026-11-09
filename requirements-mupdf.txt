@@ -1,0 +1,9 @@
+# OPTIONAL - only for --pdf-engine mupdf / auto.
+#
+# Why it is optional: the 68 MB pymupdf wheel re-encodes the page images with
+# Flate, which makes text-heavy PDFs about 2.5x smaller (4.4 MB vs 12.6 MB in
+# our benchmark).  img2pdf, which is 100 KB, does the job otherwise - with no
+# quality loss, just a bigger file.
+#
+# If you are short on disk, skip this and use:  --pdf-engine img2pdf
+pymupdf>=1.24.0
